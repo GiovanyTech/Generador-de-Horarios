@@ -19,12 +19,15 @@ Un script de Python que genera todas las combinaciones de horarios de clases pos
 
 ## Estructura del Proyecto
 
+| Archivo | Descripción |
+| --- | --- |
+| `BloqueHoras.py` | La clase base. Representa un único bloque de tiempo indivisible. |
+
 *   **`main.py`**: El punto de entrada de la aplicación. Carga los datos y orquesta la generación y visualización de horarios.
 *   **`GeneradorHorarios.py`**: Contiene el motor lógico que combina y filtra los horarios, no es una clase como tal.
 *   **`Horario.py`**: Representa un único horario válido y validado. Responsable de la presentación final.
 *   **`Asignatura.py`**: Modela una asignatura y gestiona su colección de grupos.
 *   **`Grupo.py`**: Modela un grupo específico de una asignatura (profesor y horarios).
-*   **`BloqueHoras.py`**: La clase base. Representa un único bloque de tiempo indivisible.
 
 ## Conceptos de Diseño Demostrados
 
