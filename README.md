@@ -1,13 +1,13 @@
 # Generador de Horarios Universitarios (By: GiovanyTech)
 
-Un script de Python que genera todas las combinaciones de horarios de clases posibles y sin conflictos a partir de un catálogo de asignaturas y grupos. Este proyecto está construido con un fuerte enfoque en los principios de Diseño Orientado a Objetos (OOP) para garantizar un código robusto, legible y sostenible a cambios futuros.
+Un script de Python que genera todas las combinaciones de horarios de clases posibles y sin conflictos a partir de un catálogo de asignaturas y grupos ingresadas por el usuario. Este proyecto está construido con un fuerte enfoque en los principios de Diseño Orientado a Objetos (OOP) para garantizar un código robusto, legible y sostenible a cambios futuros.
 
 ## Características Clave
 
 *   **Arquitectura Orientada a Objetos:** El sistema está modelado en capas de abstracción (`BloqueHoras`, `Grupo`, `Asignatura`, `Horario`), cada una con una única responsabilidad.
 *   **Validación y Robustez:** Las clases se auto-validan en su creación (principio "Fail-Fast"), asegurando que no puedan existir objetos en estados inválidos (ej. un horario con conflictos).
 *   **Eficiencia:** Utiliza estructuras de datos eficientes (`dict`, `set`) para búsquedas rápidas y un generador (`yield`) para producir horarios sin consumir grandes cantidades de memoria.
-*   **Código Limpio y "Pythónico":** Emplea características idiomáticas de Python como decoradores (`@property`, `@staticmethod`), "dunder methods" (`__str__`, `__eq__`) y Type Hinting para una máxima claridad.
+*   **Código Limpio y "Pythónico":** Emplea características idiomáticas de Python como decoradores (`@property`, `@staticmethod`, @total_ordering), "dunder methods" para mostrar información de los objetos (`__str__`, `__repr__`) y Type Hinting para una máxima claridad.
 
 ## ¿Cómo Ejecutarlo?
 
