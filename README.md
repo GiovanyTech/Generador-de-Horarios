@@ -1,6 +1,6 @@
-# Generador de Horarios Universitarios
+# Generador de Horarios Universitarios (By: GiovanyTech)
 
-Un script de Python que genera todas las combinaciones de horarios de clases posibles y sin conflictos a partir de un catálogo de asignaturas y grupos. Este proyecto está construido con un fuerte enfoque en los principios de Diseño Orientado a Objetos (OOP) para garantizar un código robusto, legible y sostenible.
+Un script de Python que genera todas las combinaciones de horarios de clases posibles y sin conflictos a partir de un catálogo de asignaturas y grupos. Este proyecto está construido con un fuerte enfoque en los principios de Diseño Orientado a Objetos (OOP) para garantizar un código robusto, legible y sostenible a cambios futuros.
 
 ## Características Clave
 
@@ -12,7 +12,7 @@ Un script de Python que genera todas las combinaciones de horarios de clases pos
 ## ¿Cómo Ejecutarlo?
 
 1.  Asegúrate de tener Python 3.9 o superior instalado.
-2.  Clona este repositorio: `git clone https://github.com/TU_USUARIO/TU_REPOSITORIO.git`
+2.  Clona este repositorio.
 3.  Navega a la carpeta del proyecto: `cd TU_REPOSITORIO`
 4.  Ejecuta el programa principal: `python main.py`
 5.  Puedes modificar los datos de las materias en la función `cargar_catalogo_materias()` dentro de `main.py` para experimentar.
@@ -20,7 +20,7 @@ Un script de Python que genera todas las combinaciones de horarios de clases pos
 ## Estructura del Proyecto
 
 *   **`main.py`**: El punto de entrada de la aplicación. Carga los datos y orquesta la generación y visualización de horarios.
-*   **`GeneradorHorarios.py`**: Contiene el motor lógico que combina y filtra los horarios.
+*   **`GeneradorHorarios.py`**: Contiene el motor lógico que combina y filtra los horarios, no es una clase como tal.
 *   **`Horario.py`**: Representa un único horario válido y validado. Responsable de la presentación final.
 *   **`Asignatura.py`**: Modela una asignatura y gestiona su colección de grupos.
 *   **`Grupo.py`**: Modela un grupo específico de una asignatura (profesor y horarios).
@@ -32,6 +32,6 @@ Este proyecto es una demostración práctica de los siguientes conceptos de inge
 
 *   **Encapsulación:** Los datos internos de cada objeto están protegidos y solo se exponen a través de una API pública y segura.
 *   **Inmutabilidad:** La clase `BloqueHoras` es inmutable para garantizar la integridad de los datos.
-*   **Principio de Responsabilidad Única (SRP):** Cada clase tiene un propósito claro y definido.
+*   **Principio de Responsabilidad Única (SRP):** Cada clase tiene un propósito claro y definido, así como sus funciones (es decir, las funciones no realizan múltiples tareas, deben realizar una pero bien hecha).
 *   **Programación Defensiva:** El código anticipa y maneja errores de forma elegante (`try-except`, validación de entradas).
 *   **Uso de Generadores para la Eficiencia de Memoria.**
