@@ -19,16 +19,16 @@ Un script de Python que genera todas las combinaciones de horarios de clases pos
 
 ## Estructura del Proyecto
 
+El proyecto está organizado en una arquitectura de capas, donde cada clase tiene una responsabilidad única. Las clases de nivel inferior (`BloqueHoras`) son utilizadas por las de nivel superior (`Grupo`, `Asignatura`) para construir el *modelo de datos* completo.
+
 | Archivo | Descripción |
 | --- | --- |
 | `BloqueHoras.py` | La clase base. Representa un único bloque de tiempo indivisible. |
 | `Grupo.py` | Modela un grupo específico de una asignatura (profesor y horarios). |
-
-*   **`main.py`**: El punto de entrada de la aplicación. Carga los datos y orquesta la generación y visualización de horarios.
-*   **`GeneradorHorarios.py`**: Contiene el motor lógico que combina y filtra los horarios, no es una clase como tal.
-*   **`Horario.py`**: Representa un único horario válido y validado. Responsable de la presentación final.
-*   **`Asignatura.py`**: Modela una asignatura y gestiona su colección de grupos.
-*   ****: 
+| `Asignatura.py` | Modela una asignatura y gestiona su colección de grupos. |
+| `Horario.py` | Representa un único horario válido y validado. Responsable de la presentación final. |
+| `GeneradorHorarios.py` | Contiene el motor lógico que combina y filtra los horarios, no es una clase como tal. |
+| `main.py` | El punto de entrada de la aplicación. Carga los datos y orquesta la generación y visualización de horarios. |
 
 ## Conceptos de Diseño Demostrados
 
