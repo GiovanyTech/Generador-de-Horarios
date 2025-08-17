@@ -5,48 +5,83 @@ import GeneradorHorarios
 from Asignatura import Asignatura
 from Grupo import Grupo
 from BloqueHoras import DiaSemana, BloqueHoras
-from typing import List, Generator, Dict
+# from typing import List, Generator, Dict
 
 def cargar_catalogo_materias():
-    # Definir las asignaturas a cursar
+    # --- Creamos las asignaturas ---
     eym = Asignatura("Electricidad y Magnetismo")
-    lab_eym = Asignatura("Laboratorio de EyM")
-    ed = Asignatura("Estructuras Discretas")
-    cyc = Asignatura("Cultura y Comunicación")
+    ed = Asignatura("Ecuaciones Diferenciales")
+    an = Asignatura("Análisis Numérico")
+    md = Asignatura("Matemáticas Discretas")
 
-    # Poblar cada asignatura con sus grupos y horarios disponibles
-    eym.agregar_grupo(Grupo(8, "M.I. Germán Ramón Arconada", [
-        BloqueHoras(DiaSemana.LUNES, "17:00", "19:00"),
-        BloqueHoras(DiaSemana.MIERCOLES, "17:00", "19:00")]))
-    eym.agregar_grupo(Grupo(17, "Ing. Santiago Gonzalez Lopez", [
-        BloqueHoras(DiaSemana.MARTES, "19:00", "21:00"),
-        BloqueHoras(DiaSemana.JUEVES, "19:00", "21:00")
-    ]))
-    eym.agregar_grupo(Grupo(5, "M.I. Mayverena Jurado Pineda", [
-        BloqueHoras(DiaSemana.LUNES, "11:00", "13:00"),
-        BloqueHoras(DiaSemana.MIERCOLES, "11:00", "13:00")
-    ]))
+    # --- Creamos y agregamos grupos a Electricidad y Magnetismo ---
+    gp_eym_2 = Grupo(2, "Mat. James Clerk Maxwell", [
+        BloqueHoras(DiaSemana.MARTES, "11:00", "13:00"),
+        BloqueHoras(DiaSemana.JUEVES, "11:00", "13:00")
+    ])
 
-    lab_eym.agregar_grupo(Grupo(12, "MI. Rafael Guillermo Suarez Najera", [
-        BloqueHoras(DiaSemana.MARTES, "17:00", "19:00")
-    ]))
+    gp_eym_4 = Grupo(4, "Fis. Gustav Robert Kirchhoff", [
+        BloqueHoras(DiaSemana.LUNES, "13:00", "15:00"),
+        BloqueHoras(DiaSemana.MIERCOLES, "13:00", "15:00")
+    ])
 
-    ed.agregar_grupo(Grupo(1, "M.I. Yi Tan Li", [
+    gp_eym_6 = Grupo(6, "Fis. Hendrik Antoon Lorentz", [
+        BloqueHoras(DiaSemana.MIERCOLES, "15:00", "17:00"),
+        BloqueHoras(DiaSemana.VIERNES, "15:00", "17:00")
+    ])
+
+    gp_eym_8 = Grupo(8, "Mtro. Michael Faraday", [
         BloqueHoras(DiaSemana.MARTES, "17:00", "19:00"),
         BloqueHoras(DiaSemana.JUEVES, "17:00", "19:00")
-    ]))
+    ])
 
-    ed.agregar_grupo(Grupo(5, "Ing. Orlando Zaldivar Zamorategui", [
-        BloqueHoras(DiaSemana.MARTES, "15:00", "17:00"),
-        BloqueHoras(DiaSemana.JUEVES, "15:00", "17:00")
-    ]))
+    eym.agregar_grupo(gp_eym_2)
+    eym.agregar_grupo(gp_eym_4)
+    eym.agregar_grupo(gp_eym_6)
+    eym.agregar_grupo(gp_eym_8)
 
-    cyc.agregar_grupo(Grupo(27, "Ing. Jorge Velazquez", [
-        BloqueHoras(DiaSemana.MIERCOLES, "19:00", "21:00"),
+    # --- Creamos y agregamos grupos a Ecuaciones Diferenciales ---
+    gp_ed_3 = Grupo(3, "Fis. Józef Maria Hoene-Wroński", [
+        BloqueHoras(DiaSemana.MARTES, "17:00", "19:00"),
+        BloqueHoras(DiaSemana.JUEVES, "17:00", "19:00")
+    ])
+
+    gp_ed_4 = Grupo(4, "Fis. Pierre-Simon Laplace", [
+        BloqueHoras(DiaSemana.MIERCOLES, "15:00", "17:00"),
+        BloqueHoras(DiaSemana.VIERNES, "15:00", "17:00")
+    ])
+    gp_ed_5 = Grupo(5, "Mat. Jean-Baptiste Joseph Fourier", [
+        BloqueHoras(DiaSemana.LUNES, "11:00", "13:00"),
+        BloqueHoras(DiaSemana.MIERCOLES, "11:00", "13:00")
+    ])
+
+    ed.agregar_grupo(gp_ed_3)
+    ed.agregar_grupo(gp_ed_4)
+    ed.agregar_grupo(gp_ed_5)
+
+    # --- Creamos y agregamos grupos a Análisis Numérico ---
+    gp_an_1 = Grupo(1, "Ing. Alekséi Nikoláyevich Krylov", [
+        BloqueHoras(DiaSemana.MARTES, "19:00", "21:00"),
         BloqueHoras(DiaSemana.JUEVES, "19:00", "21:00")
-    ]))
+    ])
 
-    return [eym, lab_eym, ed, cyc]
+    gp_an_2 = Grupo(2, "Mat. Brook Taylor", [
+        BloqueHoras(DiaSemana.LUNES, "07:00", "09:00"),
+        BloqueHoras(DiaSemana.MIERCOLES, "07:00", "09:00")
+    ])
+
+    an.agregar_grupo(gp_an_1)
+    an.agregar_grupo(gp_an_2)
+
+    # --- Creamos y agregamos grupos a Matemáticas Discretas ---
+    gp_md_1 = Grupo(1, "Mat. Leonhard Paul Euler", [
+        BloqueHoras(DiaSemana.MARTES, "13:00", "15:00"),
+        BloqueHoras(DiaSemana.JUEVES, "13:00", "15:00")
+    ])
+
+    md.agregar_grupo(gp_md_1)
+
+    return [eym, ed, an, md]
 
 if __name__ == "__main__":
     print("Iniciando generador de horarios...")
@@ -56,7 +91,7 @@ if __name__ == "__main__":
     print(f"Catálogo cargado con {len(materias_disponibles)} materias.")
 
     # 2. Definir cuántas materias queremos cursar
-    NUMERO_MATERIAS_A_CURSAR = 3 # Podemos cambiar este número
+    NUMERO_MATERIAS_A_CURSAR = 4 # Podemos cambiar este número
     print(f"Buscando combinaciones de horarios para {NUMERO_MATERIAS_A_CURSAR} materias de {len(materias_disponibles)} disponbiles")
     print("-" * 50)
 
