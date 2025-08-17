@@ -1,4 +1,4 @@
-# **Generador de Horarios Universitarios (By: GiovanyTech)**
+# **Generador de Horarios Universitarios By: [GiovanyTech](https://www.youtube.com/@GiovanyTech)**
 
 Un script de Python que genera todas las combinaciones de horarios de clases posibles y sin conflictos a partir de un catálogo de asignaturas y grupos ingresadas por el usuario. Este proyecto está construido con un fuerte enfoque en los principios de Diseño Orientado a Objetos (OOP) para garantizar un código robusto, legible y sostenible a cambios futuros.
 
