@@ -30,6 +30,11 @@ El proyecto está organizado en una arquitectura de capas, donde cada clase tien
 | `GeneradorHorarios.py` | Contiene el motor lógico que combina y filtra los horarios, no es una clase como tal. |
 | `main.py` | El punto de entrada de la aplicación. Carga los datos y orquesta la generación y visualización de horarios. |
 
+La siguiente imagen ilustra la relación lógica entre las entidades del programa:
+
+![Diagrama de la Estructura de Datos](images/Estructura_De_Datos.png)
+
+
 ## Conceptos de Diseño Demostrados
 
 Este proyecto es una demostración práctica de los siguientes conceptos de ingeniería de software:
